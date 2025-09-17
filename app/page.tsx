@@ -1,7 +1,7 @@
 export default function Home() {
   return (
    <main className="">
-       <div className="bg-[url('/beeu-workshop/images/sgp.jpg')] bg-cover bg-center w-full h-screen">
+       <div className="bg-[url('/workshop/images/sgp.jpg')] bg-cover bg-center w-full h-screen">
            <div className="text-white w-full h-screen flex flex-col items-center justify-center backdrop-blur-sm backdrop-brightness-75">
                 <span className="text-2xl">AAAI 2026 Workshop on</span>
                 <h1 className="text-4xl font-bold text-center">
