@@ -1,3 +1,7 @@
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
+import ProfileCard from "@/components/ui/profile-card";
+
 export default function Home() {
   return (
    <main className="">
@@ -17,7 +21,7 @@ export default function Home() {
           {/* Overview */}
           <div className="w-full flex flex-col space-y-4" id="overview">
               <h2 className="text-4xl">Overview</h2>
-              <p className="text-2xl">
+              <p className="text-xl">
                   Humans inherently communicate through body language. Bodily
                   expressions are a fundamental, often subconscious, way of responding to social situations and
                   expressing emotions. Despite extensive studies in psychology, human behavior, dance, and
@@ -37,7 +41,7 @@ export default function Home() {
           {/* Call For Papers */}
           <div className="w-full flex flex-col space-y-4" id="topics">
               <h2 className="text-4xl">Topics of Interest</h2>
-              <ol className="text-2xl list-decimal pl-10">
+              <ol className="text-xl list-decimal pl-10">
                   <li>Automatic Modeling of Body Language</li>
                   <li>Emotion Recognition using Body Language</li>
                   <li>Activity Recognition using Body Language</li>
@@ -50,7 +54,7 @@ export default function Home() {
                   <li>Human movements coding system</li>
                   <li>Algorithmic fairness and data ethics related to emotion modeling</li>
               </ol>
-              <p className="text-2xl">
+              <p className="text-xl">
                   The workshop will include the following components: oral paper presentations, lightning talk
                   sessions, keynote talks by invited speakers, and a panel discussion. The workshop will also
                   have a challenge component, and the presentations can include top submissions made to our
@@ -61,38 +65,45 @@ export default function Home() {
           {/* Submission Guidelines */}
           <div className="w-full flex flex-col space-y-4" id="guidelines">
               <h2 className="text-4xl">Submission Guidelines</h2>
-              <div className="flex flex-col space-y-4 text-2xl">
+              <div className="flex flex-col space-y-4 text-xl">
                   <p>
                       We invite submissions on any of the topics of interest (or adjacent topics) in two different
                       formats:
                   </p>
-                  <ol type={"a"}>
+                  <ol>
                       <li>
-                          <span className="font-bold">2 page Extended Abstracts</span>: these submissions will be selected to provide a ~5 minute
+                          <span className="font-bold">2 Page Extended Abstracts</span>: these submissions will be selected to provide a ~5 minute
                           lightning talk
                       </li>
                       <li>
-                          <span className="font-bold">6-8 pages full papers</span>: these submissions will be selected for oral presentations of about
+                          <span className="font-bold">6-8 Page Full Papers</span>: these submissions will be selected for oral presentations of about
                           15 minutes.
                       </li>
                   </ol>
                   <p>
                       We welcome the submission of in-progress, unpublished, or already published work (subject to
-                      the policies of the original publishing venue).
+                      the policies of the original publishing venue). Submissions should follow
+                      <Link className="mx-1 font-semibold underline" href="https://aaai.org/conference/aaai/aaai-26/submission-instructions/" target="_blank">AAAI style guidelines ↗</Link>
+                      and the page limit does not include appendices or references.
                   </p>
+
+                  <Button className="py-8 shadow-xl bg-stone-700 mt-4">
+                      <Link target="_blank" href="https://openreview.net/group?id=AAAI.org/2026/Workshop/BEEU">Link to Submission via OpenReview ↗</Link>
+                  </Button>
               </div>
           </div>
 
           {/* Important Dates */}
           <div className="w-full flex flex-col justify-center space-y-4" id="dates">
               <h2 className="text-4xl">Important Dates</h2>
-              <p className="text-lg italic">TBA</p>
+              <p className="text-xl"><span className="font-bold">Deadline for Submission</span>: October 24th, 2025</p>
+              <p className="text-xl"><span className="font-bold">Notifications sent to Authors</span>: November 7th, 2025</p>
           </div>
 
           {/* Schedule */}
           <div className="w-full flex flex-col justify-center space-y-4" id="schedule">
               <h2 className="text-4xl">Schedule</h2>
-              <p className="text-lg italic">TBA</p>
+              <p className="text-xl">A full-day workshop on January 26th, 2026. Stay tuned for the full schedule.</p>
           </div>
 
           {/* Invited Speakers */}
@@ -102,15 +113,36 @@ export default function Home() {
           </div>
 
           {/* Organizing Committee */}
-          <div className="w-full flex flex-col justify-center space-y-4" id="organizers">
+          <div className="w-full flex flex-col justify-center" id="organizers">
               <h2 className="text-4xl">Organizing Committee</h2>
-              <p className="text-lg italic">TBA</p>
+              <div className="mt-4 p-4 border rounded-2xl grid grid-cols-1 lg:grid-cols-3 gap-2">
+                  <div className="lg:col-span-2">
+                      <ProfileCard imageUrl="/workshop/avatars/jzw.jpg" name="James Z. Wang" title="Distinguished Professor, Penn State (Workshop Chair)" email="jzw11@psu.edu"/>
+                  </div>
+                  <ProfileCard imageUrl="/workshop/avatars/sb.jpg" name="Sree Bhattacharyya" title="PhD Student, Penn State" email="sfb6038@psu.edu"/>
+                  <ProfileCard imageUrl="/workshop/avatars/al.jpg" name="Amy LaViers" title="Director, The RAD Lab" email="amy@the-rad-lab.org"/>
+                  <ProfileCard imageUrl="/workshop/avatars/ra.jpg" name="Reg Adams" title="Professor, Penn State" email="rba10@psu.edu"/>
+                  <ProfileCard imageUrl="/workshop/avatars/rt.jpg" name="Rachelle Tsachor" title="Associate Professor, University of Illinois Chicago" email="rtsachor@uic.edu"/>
+              </div>
+          </div>
+
+          {/* Other Contributors */}
+          <div className="w-full flex flex-col justify-center">
+              <h2 className="text-4xl">Other Contributors</h2>
+              <div className="mt-4 p-4 border rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-2">
+                  <div className="lg:col-span-2">
+                      <ProfileCard imageUrl="/workshop/avatars/sz.jpg" name="Sitao Zhang" title="PhD Student, Penn State" email="sitao.zhang@psu.edu"/>
+                  </div>
+                  <ProfileCard imageUrl="/workshop/avatars/jc.jpg" name="Jonathan Chen" title="Undergrad Student, Penn State" email="jqc6822@psu.edu"/>
+                  <ProfileCard imageUrl="/workshop/avatars/jl.jpg" name="Justin Lokos" title="Independent Contributor" email="jtl5503@psu.edu"/>
+              </div>
           </div>
       </div>
-
-
-
-
+       {/* Footer */}
+       <div className="h-1 bg-stone-500 w-full"/>
+       <div className="py-4 bg-stone-700 text-white w-full flex flex-col justify-center">
+           <p className="px-4 lg:px-24 text-xs text-center lg:text-start">© The 2nd International Workshop on Bodily Expressed Emotion Understanding (BEEU, 2026)</p>
+       </div>
    </main>
   );
 }

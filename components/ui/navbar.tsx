@@ -48,11 +48,11 @@ export default function Navbar() {
 
     return (
         <div
-            className={`pointer-events-none lg:pointer-events-auto fixed top-0 left-0 w-full z-30 invert transition-colors duration-300 ${
-                scrolled ? "bg-white/90 backdrop-blur-md" : "bg-transparent"
+            className={`pointer-events-none lg:pointer-events-auto fixed top-0 left-0 w-full z-30 transition-colors duration-300 ${
+                scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
             }`}
         >
-            <div className="grid grid-cols-3 items-center py-4 px-4 lg:px-24">
+            <div className="invert grid grid-cols-3 items-center py-4 px-4 lg:px-24">
                 {/* Logo */}
                 <div className="col-span-1 flex items-center space-x-2">
                     <Button

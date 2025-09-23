@@ -114,6 +114,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html { @apply scroll-pt-28; }
   body {
     @apply bg-background text-foreground;
   }

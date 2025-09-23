@@ -53,7 +53,7 @@ export default function NavbarMobile() {
         <div className="ml-auto fixed z-40 flex w-full justify-end px-4 py-4">
             <Button
                 onClick={onOpen}
-                className="p-2 -mb-2 block lg:hidden bg-black"
+                className="p-2 -mb-2 block lg:hidden bg-transparent shadow-none"
             >
                 <MenuIcon />
             </Button>
@@ -65,7 +65,7 @@ export default function NavbarMobile() {
                 onClose={onClose}
             >
                 {/* Background overlay */}
-                <div className="fixed inset-0 bg-black bg-opacity-25" />
+                <div className="fixed inset-0" />
 
                 {/* Dialog */}
                 <div className="fixed inset-0 z-40 flex">
