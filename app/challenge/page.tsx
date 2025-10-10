@@ -16,7 +16,7 @@ export default function Challenge() {
                 </h1>
 
                <span className="mt-12">4 Challenge Tracks</span>
-               <span> Due January 10th, 2026</span>
+               <span> Open until January 10th, 2026</span>
            </div>
        </div>
 
@@ -124,9 +124,10 @@ export default function Challenge() {
           <div className="w-full flex flex-col justify-center space-y-4" id="dates">
               <h2 className="text-4xl">Important Dates</h2>
               <p className="text-xl"><span className="font-bold">ABEE Dataset Release</span>: October 10th, 2025</p>
-              <p className="text-xl"><span className="font-bold">Deadline for Paper Submissions</span>: October 24th, 2025</p>
+              <p className="text-xl"><span className="font-bold">Deadline for Paper Submissions</span>: November 4th, 2025</p>
               <p className="text-xl"><span className="font-bold">Notifications sent to Authors</span>: November 7th, 2025</p>
               <p className="text-xl"><span className="font-bold">Challenge Leaderboard Closes</span>: December 31st, 2025</p>
+              <p className="text-xl"><span className="font-bold">Solution Submission Deadline for All Tracks</span>: January 10th, 2026</p>
               <p className="text-xl"><span className="font-bold">Workshop Presentations</span>: January 26th, 2026</p>
 
               <p>
