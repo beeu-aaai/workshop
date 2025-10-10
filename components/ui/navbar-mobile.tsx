@@ -10,14 +10,26 @@ import {
     NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
-const sections = [
+let sections: {id: string, label: string}[];
+
+const workshop_sections = [
     { id: "overview", label: "Overview" },
     { id: "topics", label: "Topics" },
     { id: "guidelines", label: "Submission Guidelines" },
     { id: "dates", label: "Dates" },
     { id: "schedule", label: "Schedule" },
     { id: "speakers", label: "Speakers" },
+    { id: "organizers", label: "Organizers" },
+];
+
+const challenge_sections = [
+    { id: "overview", label: "Overview" },
+    { id: "tasks", label: "Challenge Tasks" },
+    { id: "participation", label: "Participation" },
+    { id: "awards", label: "Awards & Recognition" },
+    { id: "dates", label: "Dates" },
     { id: "organizers", label: "Organizers" },
 ];
 
@@ -49,11 +61,18 @@ export default function NavbarMobile() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const challenge = usePathname() == "/challenge"
+    if (challenge) {
+        sections = challenge_sections
+    } else {
+        sections = workshop_sections
+    }
+
     return (
-        <div className="ml-auto fixed z-40 flex w-full justify-end px-4 py-4">
+        <div className={`lg:pointer-events-none ml-auto fixed z-40 flex w-full justify-end px-4 ${challenge ? "py-4" : "py-12"}`}>
             <Button
                 onClick={onOpen}
-                className="p-2 -mb-2 block lg:hidden bg-transparent shadow-none"
+                className="p-2 block lg:hidden bg-transparent shadow-none"
             >
                 <MenuIcon />
             </Button>
@@ -71,7 +90,7 @@ export default function NavbarMobile() {
                 <div className="fixed inset-0 z-40 flex">
                     <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white shadow-xl">
                         {/* Close button */}
-                        <div className="flex items-center justify-end px-4 py-4">
+                        <div className={`flex items-center justify-end px-4 ${challenge ? "py-4" : "py-12"}`}>
                             <Button onClick={onClose}>
                                 <X size={15} />
                             </Button>

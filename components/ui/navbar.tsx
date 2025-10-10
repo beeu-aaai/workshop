@@ -8,8 +8,13 @@ import {
 import Link from "next/link";
 import { Button } from "./button";
 import { useEffect, useState } from "react";
+import Banner from "./banner";
+import NavbarMobile from "@/components/ui/navbar-mobile";
+import {usePathname} from "next/navigation";
 
-const sections = [
+let sections: {id: string, label: string}[];
+
+const workshop_sections = [
     { id: "overview", label: "Overview" },
     { id: "topics", label: "Topics" },
     { id: "guidelines", label: "Submission Guidelines" },
@@ -19,7 +24,17 @@ const sections = [
     { id: "organizers", label: "Organizers" },
 ];
 
+const challenge_sections = [
+    { id: "overview", label: "Overview" },
+    { id: "tasks", label: "Challenge Tasks" },
+    { id: "participation", label: "Participation" },
+    { id: "awards", label: "Awards & Recognition" },
+    { id: "dates", label: "Dates" },
+    { id: "organizers", label: "Organizers" },
+];
+
 export default function Navbar() {
+
     const [active, setActive] = useState<string>("overview");
     const [scrolled, setScrolled] = useState(false);
 
@@ -46,12 +61,20 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const challenge = usePathname() == "/challenge"
+    if (challenge) {
+        sections = challenge_sections
+    } else {
+        sections = workshop_sections
+    }
+
     return (
         <div
-            className={`pointer-events-none lg:pointer-events-auto fixed top-0 left-0 w-full z-30 transition-colors duration-300 ${
+            className={`fixed flex flex-col top-0 left-0 w-full z-30 transition-colors duration-300 ${
                 scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
             }`}
         >
+            {!challenge && <Banner/>}
             <div className="invert grid grid-cols-3 items-center py-4 px-4 lg:px-24">
                 {/* Logo */}
                 <div className="col-span-1 flex items-center space-x-2">
@@ -59,12 +82,12 @@ export default function Navbar() {
                         variant="link"
                         className="w-min px-0"
                     >
-                        AAAI 2026 BEEU Workshop
+                        <Link href="/">AAAI 2026 BEEU Workshop {challenge && "| Challenge"}</Link>
                     </Button>
                 </div>
 
                 {/* Nav Links */}
-                <div className="hidden lg:flex w-full col-span-2 items-center justify-end">
+                <div className={`hidden lg:flex w-full col-span-2 items-center justify-end`}>
                     <NavigationMenu>
                         <NavigationMenuList className="w-auto border border-black py-2 px-1 rounded-full">
                             {sections.map((s) => (
@@ -81,6 +104,7 @@ export default function Navbar() {
                     </NavigationMenu>
                 </div>
             </div>
+            <NavbarMobile/>
         </div>
     );
 }

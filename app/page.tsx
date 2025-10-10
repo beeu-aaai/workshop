@@ -62,9 +62,9 @@ export default function Home() {
               </p>
           </div>
 
-          {/* Submission Guidelines */}
+          {/* Paper Submission Guidelines */}
           <div className="w-full flex flex-col space-y-4" id="guidelines">
-              <h2 className="text-4xl">Submission Guidelines</h2>
+              <h2 className="text-4xl">Paper Submission Guidelines</h2>
               <div className="flex flex-col space-y-4 text-xl">
                   <p>
                       We invite submissions on any of the topics of interest (or adjacent topics) in two different
@@ -87,7 +87,7 @@ export default function Home() {
                       and the page limit does not include appendices or references.
                   </p>
 
-                  <Button className="py-8 shadow-xl bg-stone-700 mt-4">
+                  <Button className="py-8 shadow-xl bg-red-800 mt-4 hover:bg-red-900">
                       <Link target="_blank" href="https://openreview.net/group?id=AAAI.org/2026/Workshop/BEEU">Link to Submission via OpenReview ↗</Link>
                   </Button>
               </div>
@@ -96,8 +96,9 @@ export default function Home() {
           {/* Important Dates */}
           <div className="w-full flex flex-col justify-center space-y-4" id="dates">
               <h2 className="text-4xl">Important Dates</h2>
-              <p className="text-xl"><span className="font-bold">Deadline for Submission</span>: October 24th, 2025</p>
+              <p className="text-xl"><span className="font-bold">Deadline for Paper Submissions</span>: October 24th, 2025</p>
               <p className="text-xl"><span className="font-bold">Notifications sent to Authors</span>: November 7th, 2025</p>
+              <p className="text-xl"><span className="font-bold">Workshop Presentations</span>: January 26th, 2026</p>
           </div>
 
           {/* Schedule */}
@@ -129,10 +130,8 @@ export default function Home() {
           {/* Other Contributors */}
           <div className="w-full flex flex-col justify-center">
               <h2 className="text-4xl">Other Contributors</h2>
-              <div className="mt-4 p-4 border rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-2">
-                  <div className="lg:col-span-2">
-                      <ProfileCard imageUrl="/workshop/avatars/sz.jpg" name="Sitao Zhang" title="PhD Student, Penn State" email="sitao.zhang@psu.edu"/>
-                  </div>
+              <div className="mt-4 p-4 border rounded-2xl grid grid-cols-1 lg:grid-cols-3 gap-2">
+                  <ProfileCard imageUrl="/workshop/avatars/sz.jpg" name="Sitao Zhang" title="PhD Student, Penn State" email="sitao.zhang@psu.edu"/>
                   <ProfileCard imageUrl="/workshop/avatars/jc.jpg" name="Jonathan Chen" title="Undergrad Student, Penn State" email="jqc6822@psu.edu"/>
                   <ProfileCard imageUrl="/workshop/avatars/jl.jpg" name="Justin Lokos" title="Independent Contributor" email="jtl5503@psu.edu"/>
               </div>
