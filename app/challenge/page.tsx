@@ -105,7 +105,7 @@ export default function Challenge() {
                   </p>
 
                   <Button className="py-8 shadow-xl bg-stone-700 mt-4">
-                      <Link target="_blank" href="https://forms.gle/drPz1hdd7iRrbCDNA">Link to Participant Form ↗</Link>
+                      <Link target="_blank" href="https://forms.cloud.microsoft/r/Y4ZQfJxS13">Link to Participant Form ↗</Link>
                   </Button>
               </div>
           </div>
