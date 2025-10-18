@@ -18,6 +18,7 @@ const workshop_sections = [
     { id: "overview", label: "Overview" },
     { id: "topics", label: "Topics" },
     { id: "guidelines", label: "Submission Guidelines" },
+    { id: "reviewers", label: "Reviewers"},
     { id: "dates", label: "Dates" },
     { id: "schedule", label: "Schedule" },
     { id: "speakers", label: "Speakers" },

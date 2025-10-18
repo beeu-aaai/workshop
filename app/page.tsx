@@ -93,6 +93,20 @@ export default function Home() {
               </div>
           </div>
 
+          {/* Reviewers */}
+          <div className="w-full flex flex-col justify-center space-y-4" id="reviewers">
+              <h2 className="text-4xl">Call for Reviewers</h2>
+              <p className="text-xl">
+                  We welcome anyone interested to apply to be a reviewer. The role of reviewers is to provide constructive feedback to all assigned submissions and rate each submission in terms of relevance, clarity, novelty, significance, and technical quality.
+              </p>
+              <p className="text-xl"><span className="font-bold">Reviewer Application Deadline</span>: October 25th, 2025</p>
+              <p className="text-xl"><span className="font-bold">Reviewer Decisions and Assignments</span>: Rolling</p>
+
+              <Button className="py-8 shadow-xl bg-stone-700 mt-4">
+                  <Link target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LsWMWqsuOyhMkMwlCpsAiOpUQzMxMENBNVpZTklGUTdNT0g2VTlSRTNSSi4u">Link to Reviewer Sign Up Form ↗</Link>
+              </Button>
+          </div>
+
           {/* Important Dates */}
           <div className="w-full flex flex-col justify-center space-y-4" id="dates">
               <h2 className="text-4xl">Important Dates</h2>
@@ -137,6 +151,7 @@ export default function Home() {
               </div>
           </div>
       </div>
+
        {/* Footer */}
        <div className="h-1 bg-stone-500 w-full"/>
        <div className="py-4 bg-stone-700 text-white w-full flex flex-col justify-center">
