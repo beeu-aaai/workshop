@@ -25,12 +25,11 @@ export default function ProfileCard({ imageUrl, name, title, email }: ProfileCar
             </CardHeader>
             <CardContent className="flex items-center justify-center gap-2">
                 <Mail className="w-4 h-4 text-gray-600" />
-                <a
-                    href={`mailto:${email}`}
+                <p
                     className="text-center text-sm hover:underline break-all"
                 >
                     {email}
-                </a>
+                </p>
             </CardContent>
         </Card>
     )
