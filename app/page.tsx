@@ -111,7 +111,7 @@ export default function Home() {
           <div className="w-full flex flex-col justify-center space-y-4" id="dates">
               <h2 className="text-4xl">Important Dates</h2>
               <p className="text-xl"><span className="font-bold">Deadline for Paper Submissions</span>: November 4th, 2025</p>
-              <p className="text-xl"><span className="font-bold">Notifications sent to Authors</span>: November 14th, 2025</p>
+              <p className="text-xl"><span className="font-bold">Notifications sent to Authors</span>: November 17th, 2025</p>
               <p className="text-xl"><span className="font-bold">Workshop Presentations</span>: January 26th, 2026</p>
           </div>
 
