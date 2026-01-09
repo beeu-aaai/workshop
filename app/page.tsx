@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import ProfileCard from "@/components/ui/profile-card";
+import SpeakerCard from "@/components/ui/speaker-card";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
                 </h1>
                <span className="mt-12">January 26, 2026</span>
                <span>Singapore</span>
+
+               <Link href="#location" className="underline absolute mt-80">Venue Details</Link>
            </div>
        </div>
 
@@ -118,13 +121,81 @@ export default function Home() {
           {/* Schedule */}
           <div className="w-full flex flex-col justify-center space-y-4" id="schedule">
               <h2 className="text-4xl">Schedule</h2>
-              <p className="text-xl">A full-day workshop on January 26th, 2026. Stay tuned for the full schedule.</p>
+              <div className="text-xl flex flex-col gap-4">
+                  <p>9:00 AM - 9:15 AM: Welcome Note by James Wang and Sree Bhattacharyya</p>
+                  <p>9:15 AM - 9.55 AM: Keynote Talk by Agata Lapedriza</p>
+                  <p>9:55 AM - 10:35 AM: Keynote Talk by Heather Knight</p>
+                  <p>10:35 AM - 11 AM: Coffee Break</p>
+                  <p>11 AM - 12 PM: Panel with Keynote Speakers</p>
+                  <p>12 PM - 1:00 PM: Lunch</p>
+                  <p>1:00 PM - 1:40 PM: Keynote Talk by Beatrice Gelder</p>
+                  <p>1:40 PM - 2:10 PM: Introducing the ABEE dataset by Justin Lokos and Sree Bhattacharyya</p>
+                  <p>2:10 PM - 2:50 PM: Keynote Talk by Soujanya Poria</p>
+                  <p>2:50 PM - 3:30 PM: Keynote Talk by Lauren Bedal</p>
+                  <p>3:30 PM - 4 PM: Coffee Break</p>
+                  <p>4 PM - 5 PM: Accepted Paper Talks (6 talks)</p>
+              </div>
+          </div>
+
+          <div className="w-full flex flex-col space-y-4 text-xl" id="location">
+              <h2 className="text-4xl">Venue Details</h2>
+              <p>The workshop takes place on <span className="font-semibold">January 26, 2026</span> and the venue is located at <span className="font-semibold">Grand Mercure Roxy Hotel - Meyer Room</span>. Shuttle services are available from the Singapore EXPO.</p>
+              <div style={{ width: "100%", height: 450, overflow: "hidden", borderRadius: 12 }}>
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4004.3675507162507!2d103.90220177497815!3d1.3031763617240713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da18727dfbed85%3A0x6d766d19235d9606!2sGrand%20Mercure%20Singapore%20Roxy!5e1!3m2!1sen!2sus!4v1767970419341!5m2!1sen!2sus"
+                      width="100%"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                  />
+              </div>
           </div>
 
           {/* Invited Speakers */}
           <div className="w-full flex flex-col justify-center space-y-4" id="speakers">
               <h2 className="text-4xl">Invited Speakers</h2>
-              <p className="text-lg italic">TBA</p>
+              <SpeakerCard
+                  imageUrl="/workshop/avatars/alapedriza.jpg"
+                  name="Agata Lapedriza"
+                  title="Principal Research Scientist, Institute for Experiential AI at Northeastern University"
+                  description="Agata Lapedriza is a Principal Research Scientist at Northeastern University’s Institute for Experiential AI, a Professor at Universitat Oberta de Catalunya, and a Research Affiliate at MIT CSAIL. Her work develops robust AI to interpret emotions, social signals, and human context from visual, language, and wearable-sensor data, in collaboration with clinical and cognitive science experts. Her research spans computer vision, affective computing, NLP, machine learning/deep learning, social robotics, and HCI."
+                  email="a.lapedriza (at) northeastern.edu"
+                  website="https://ai.northeastern.edu/our-people/agata-lapedriza"
+              />
+              <SpeakerCard
+                  imageUrl="/workshop/avatars/sp.jpg"
+                  name="Soujanya Poria"
+                  title="Associate Professor, Nanyang Technological University"
+                  description="Soujanya Poria is an Associate Professor at Nanyang Technological University (NTU), Singapore. His research spans large language models, reasoning, AI safety, embodied and multimodal AI, and natural language processing. He earned his Ph.D. in Computer Science from the University of Stirling (UK) and previously held roles at the Singapore University of Technology and Design and A*STAR’s Institute of High Performance Computing (IHPC)."
+                  email="soujanya.poria (at) ntu.edu.sg"
+                  website="https://soujanyaporia.github.io/"
+              />
+              <SpeakerCard
+                  imageUrl="/workshop/avatars/bdg.jpg"
+                  name="Beatrice de Gelder"
+                  title="Professor, Maastricht University"
+                  description="Beatrice de Gelder is a Professor in the Department of Cognitive Neuroscience at Maastricht University. Trained in philosophy and psychology, she earned her PhD (1972) from the University of Louvain and began her career teaching Philosophy of Science in Leiden and Tilburg before shifting to cognitive science in the mid-1990s. Her research focuses on non-conscious recognition after cortical damage, emotional expression in whole bodies, face recognition and its deficits, and multisensory perception across auditory–visual processing."
+                  email="b.degelder (at) maastrichtuniversity.nl"
+                  website="https://www.beatricedegelder.com/"
+              />
+              <SpeakerCard
+                  imageUrl="/workshop/avatars/hk.jpg"
+                  name="Heather Knight"
+                  title="Professor, Oregon State University"
+                  description="Dr. Heather Knight’s postdoc at Stanford University explored minimal robots and autonomous car interfaces, PhD in Robotics at Carnegie Mellon University in “Expressive Motion for Low Degree of Freedom Robots.” and M.S. / B.S. in Electrical Engineering & Computer Science at Massachusetts Institute of Technology, developing a Sensate Skin for a Robot Teddy Bear at the MIT Media Lab."
+                  email="heather.knight (at) oregonstate.edu"
+                  website="https://scholar.google.com/citations?user=ToADd0IAAAAJ&hl=en"
+              />
+              <SpeakerCard
+                  imageUrl="/workshop/avatars/lb.jpg"
+                  name="Lauren Bedal"
+                  title="Head of Product Design, Archetype AI"
+                  description="Lauren Bedal is a designer and thought leader in human-computer interaction, bridging the worlds of technology and embodiment. With an extensive background in movement, choreography and dance, she helps startups, agencies, and Fortune 100 companies like Google bring emerging technologies to market, specializing in embodied inputs such as proximity, gestures, body language, and biometrics (Project Soli)."
+                  email="lbedal2@gmail.com"
+                  website="https://laurenbedal.com/"
+              />
           </div>
 
           {/* Organizing Committee */}
