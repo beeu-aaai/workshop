@@ -123,7 +123,7 @@ export default function Home() {
               <h2 className="text-4xl">Schedule</h2>
               <div className="text-xl flex flex-col gap-4">
                   <p>9:00 AM - 9:15 AM: Welcome Note by James Wang and Sree Bhattacharyya</p>
-                  <p>9:15 AM - 9.55 AM: Keynote Talk by Agata Lapedriza</p>
+                  <p>9:15 AM - 9.55 AM: Keynote Talk by Amy LaViers</p>
                   <p>9:55 AM - 10:35 AM: Keynote Talk by Heather Knight</p>
                   <p>10:35 AM - 11 AM: Coffee Break</p>
                   <p>11 AM - 12 PM: Panel with Keynote Speakers</p>
@@ -157,12 +157,12 @@ export default function Home() {
           <div className="w-full flex flex-col justify-center space-y-4" id="speakers">
               <h2 className="text-4xl">Invited Speakers</h2>
               <SpeakerCard
-                  imageUrl="/workshop/avatars/alapedriza.jpg"
-                  name="Agata Lapedriza"
-                  title="Principal Research Scientist, Institute for Experiential AI at Northeastern University"
-                  description="Agata Lapedriza is a Principal Research Scientist at Northeastern University’s Institute for Experiential AI, a Professor at Universitat Oberta de Catalunya, and a Research Affiliate at MIT CSAIL. Her work develops robust AI to interpret emotions, social signals, and human context from visual, language, and wearable-sensor data, in collaboration with clinical and cognitive science experts. Her research spans computer vision, affective computing, NLP, machine learning/deep learning, social robotics, and HCI."
-                  email="a.lapedriza (at) northeastern.edu"
-                  website="https://ai.northeastern.edu/our-people/agata-lapedriza"
+                  imageUrl="/workshop/avatars/al.jpg"
+                  name="Amy LaViers"
+                  title="Director, The Robotics, Automation, and Dance (RAD) Lab"
+                  description="Amy LaViers works at the intersection of robotics and dance, directing the Robotics, Automation, and Dance (RAD) Lab, a non-profit for artmaking, commercialization, education, outreach, and research, based in Philadelphia. Amy has extensive experience organizing numerous workshops, tutorials, exhibitions, and other events related to the proposed workshop topic. These include workshops at premier robotics venues such as IEEE ICRA, ACM/IEEE HRI, and RSS. In 2025, she also chaired the Arts in Robotics Track at ICRA. Her writing, choreography, and machine designs have been presented internationally in both engineering and arts venues, including Nature, Robotics and Autonomous Systems, The MIT Press, Merce Cunningham’s studios, Joe’s Pub at the Public Theater, and the Performance Arcade.  Her teaching has been recognized on the University of Illinois at Urbana-Champaign’s list of Teachers Ranked as Excellent by Their Students with Outstanding distinction, and she is a recipient of DARPA’s Young Faculty Award and Director’s Fellowship. Her work has been featured in media outlets like The New York Times, Forbes, Wired, and Dance Magazine."
+                  email="amy (at) the-rad-lab.org"
+                  website="https://the-rad-lab.org/"
               />
               <SpeakerCard
                   imageUrl="/workshop/avatars/sp.jpg"
@@ -184,7 +184,7 @@ export default function Home() {
                   imageUrl="/workshop/avatars/hk.jpg"
                   name="Heather Knight"
                   title="Professor, Oregon State University"
-                  description="Dr. Heather Knight’s postdoc at Stanford University explored minimal robots and autonomous car interfaces, PhD in Robotics at Carnegie Mellon University in “Expressive Motion for Low Degree of Freedom Robots.” and M.S. / B.S. in Electrical Engineering & Computer Science at Massachusetts Institute of Technology, developing a Sensate Skin for a Robot Teddy Bear at the MIT Media Lab."
+                  description="Heather Knight runs the CHARISMA Robotics research group at Oregon State University. Her previous work includes a postdoc at Stanford University, a PhD in Robotics at Carnegie Mellon University exploring Expressive Motion for Low Degree of Freedom Robots, and M.S. and B.S. degrees in Electrical Engineering & Computer Science at Massachusetts Institute of Technology. Additional past work include robotics and instrumentation at NASA’s Jet Propulsion Laboratory, sensor design at Aldebaran Robotics, nine years of producing an annual Robot Film Festival, a robot flower garden installation at the Smithsonian/Cooper-Hewitt Design Museum, robot comedy on TED.com, and a British Video Music Award for OK GO’s “This Too Shall Pass” music video featuring a two-floor Rube Goldberg Machine."
                   email="heather.knight (at) oregonstate.edu"
                   website="https://scholar.google.com/citations?user=ToADd0IAAAAJ&hl=en"
               />

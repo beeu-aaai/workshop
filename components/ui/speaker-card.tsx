@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail } from "lucide-react"
+import {GlobeIcon, Mail} from "lucide-react"
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ export default function SpeakerCard({ imageUrl, name, title, description, email,
             </div>
             <div className="flex flex-col text-sm justify-center gap-4">
                 <p>{description}</p>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
                     <Mail className="w-4 h-4 text-gray-600" />
                     <p
                         className="text-center hover:underline break-all"
@@ -36,7 +36,10 @@ export default function SpeakerCard({ imageUrl, name, title, description, email,
                         {email}
                     </p>
                 </div>
-                <Link href={website} target="_blank" className="underline">{website}</Link>
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
+                    <GlobeIcon className="w-4 h-4 text-gray-600" />
+                    <Link href={website} target="_blank" className="underline">{website}</Link>
+                </div>
             </div>
         </div>
     )
