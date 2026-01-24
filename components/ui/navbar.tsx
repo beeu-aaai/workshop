@@ -17,10 +17,9 @@ let sections: {id: string, label: string}[];
 const workshop_sections = [
     { id: "overview", label: "Overview" },
     { id: "topics", label: "Topics" },
-    { id: "guidelines", label: "Submission Guidelines" },
-    { id: "reviewers", label: "Reviewers"},
     { id: "dates", label: "Dates" },
     { id: "schedule", label: "Schedule" },
+    { id: "papers", label: "Papers" },
     { id: "speakers", label: "Speakers" },
     { id: "organizers", label: "Organizers" },
 ];

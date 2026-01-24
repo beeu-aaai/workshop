@@ -65,51 +65,6 @@ export default function Home() {
               </p>
           </div>
 
-          {/* Paper Submission Guidelines */}
-          <div className="w-full flex flex-col space-y-4" id="guidelines">
-              <h2 className="text-4xl">Paper Submission Guidelines</h2>
-              <div className="flex flex-col space-y-4 text-xl">
-                  <p>
-                      We invite submissions on any of the topics of interest (or adjacent topics) in two different
-                      formats:
-                  </p>
-                  <ol>
-                      <li>
-                          <span className="font-bold">2 Page Extended Abstracts</span>: these submissions will be selected to provide a ~5 minute
-                          lightning talk
-                      </li>
-                      <li>
-                          <span className="font-bold">6-8 Page Full Papers</span>: these submissions will be selected for oral presentations of about
-                          15 minutes.
-                      </li>
-                  </ol>
-                  <p>
-                      We welcome the submission of in-progress, unpublished, or already published work (subject to
-                      the policies of the original publishing venue). Submissions should follow
-                      <Link className="mx-1 font-semibold underline" href="https://aaai.org/conference/aaai/aaai-26/submission-instructions/" target="_blank">AAAI style guidelines ↗</Link>
-                      and the page limit does not include appendices or references.
-                  </p>
-
-                  <Button className="py-8 shadow-xl bg-red-800 mt-4 hover:bg-red-900">
-                      <Link target="_blank" href="https://openreview.net/group?id=AAAI.org/2026/Workshop/BEEU">Link to Submission via OpenReview ↗</Link>
-                  </Button>
-              </div>
-          </div>
-
-          {/* Reviewers */}
-          <div className="w-full flex flex-col justify-center space-y-4" id="reviewers">
-              <h2 className="text-4xl">Call for Reviewers</h2>
-              <p className="text-xl">
-                  We welcome anyone interested to apply to be a reviewer. The role of reviewers is to provide constructive feedback to all assigned submissions and rate each submission in terms of relevance, clarity, novelty, significance, and technical quality.
-              </p>
-              <p className="text-xl"><span className="font-bold">Reviewer Application Deadline</span>: October 25th, 2025</p>
-              <p className="text-xl"><span className="font-bold">Reviewer Decisions and Assignments</span>: Rolling</p>
-
-              <Button className="py-8 shadow-xl bg-stone-700 mt-4">
-                  <Link target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LsWMWqsuOyhMkMwlCpsAiOpUQzMxMENBNVpZTklGUTdNT0g2VTlSRTNSSi4u">Link to Reviewer Sign Up Form ↗</Link>
-              </Button>
-          </div>
-
           {/* Important Dates */}
           <div className="w-full flex flex-col justify-center space-y-4" id="dates">
               <h2 className="text-4xl">Important Dates</h2>
@@ -121,19 +76,37 @@ export default function Home() {
           {/* Schedule */}
           <div className="w-full flex flex-col justify-center space-y-4" id="schedule">
               <h2 className="text-4xl">Schedule</h2>
+              <p className="-mt-4 text-muted-foreground">January 26th, 2026: Singapore Time (GMT+8)</p>
               <div className="text-xl flex flex-col gap-4">
                   <p>9:00 AM - 9:15 AM: Welcome Note by James Wang and Sree Bhattacharyya</p>
                   <p>9:15 AM - 9.55 AM: Keynote Talk by Amy LaViers</p>
                   <p>9:55 AM - 10:35 AM: Keynote Talk by Heather Knight</p>
-                  <p>10:35 AM - 11 AM: Coffee Break</p>
-                  <p>11 AM - 12 PM: Panel with Keynote Speakers</p>
-                  <p>12 PM - 1:00 PM: Lunch</p>
+                  <p>10:35 AM - 11:00 AM: Coffee Break</p>
+                  <p>11:00 AM - 12:00 PM: Panel with Keynote Speakers</p>
+                  <p>12:00 PM - 1:00 PM: Lunch</p>
                   <p>1:00 PM - 1:40 PM: Keynote Talk by Beatrice Gelder</p>
                   <p>1:40 PM - 2:10 PM: Introducing the ABEE dataset by Justin Lokos and Sree Bhattacharyya</p>
                   <p>2:10 PM - 2:50 PM: Keynote Talk by Soujanya Poria</p>
                   <p>2:50 PM - 3:30 PM: Keynote Talk by Lauren Bedal</p>
-                  <p>3:30 PM - 4 PM: Coffee Break</p>
-                  <p>4 PM - 5 PM: Accepted Paper Talks (6 talks)</p>
+                  <p>3:30 PM - 4:00 PM: Coffee Break</p>
+                  <p>4:00 PM - 5:00 PM: Accepted Paper Talks (6 talks)</p>
+              </div>
+          </div>
+
+          <div className="w-full flex flex-col space-y-4" id="papers">
+              <h2 className="text-4xl">Paper Presentations</h2>
+              <div className="flex flex-col space-y-4 text-xl">
+                  <p>
+                      Presentations during the workshop will be presented in the following order:
+                  </p>
+                  <ol className="text-xl list-decimal pl-10">
+                      <li>Pose2Lang3D: Distilling 3D Reasoning from 2D Skeletons via Language Supervision</li>
+                      <li>Exploring “Synekinian Pairs”: Manual-Vocal Gesture Integration in Experimental Contexts</li>
+                      <li>Understanding Bodily Expressed Laughter Responses to Human and AI-Generated Japanese Manzai scripts</li>
+                      <li>Gesture2Speech: How Far Can Hand Movements Shape Expressive Speech?</li>
+                      <li>Spatiotemporal Modeling of Bodily Emotional Expressions for Continuous Valence-Arousal-Dominance Prediction in Video</li>
+                      <li>Attuned Design Practice: towards Open Rehearsals for Embodied Knowledge and Computational Design</li>
+                  </ol>
               </div>
           </div>
 
