@@ -100,11 +100,11 @@ export default function Home() {
                       Presentations during the workshop will be presented in the following order:
                   </p>
                   <ol className="text-xl list-decimal pl-10">
-                      <li>Pose2Lang3D: Distilling 3D Reasoning from 2D Skeletons via Language Supervision</li>
+                      <li>Spatiotemporal Modeling of Bodily Emotional Expressions for Continuous Valence-Arousal-Dominance Prediction in Video</li>
                       <li>Exploring “Synekinian Pairs”: Manual-Vocal Gesture Integration in Experimental Contexts</li>
                       <li>Understanding Bodily Expressed Laughter Responses to Human and AI-Generated Japanese Manzai Scripts</li>
                       <li>Gesture2Speech: How Far Can Hand Movements Shape Expressive Speech?</li>
-                      <li>Spatiotemporal Modeling of Bodily Emotional Expressions for Continuous Valence-Arousal-Dominance Prediction in Video</li>
+                      <li>Pose2Lang3D: Distilling 3D Reasoning from 2D Skeletons via Language Supervision</li>
                       <li>Attuned Design Practice: Towards Open Rehearsals for Embodied Knowledge and Computational Design</li>
                   </ol>
               </div>
